@@ -7,7 +7,6 @@ export async function sendVerificationMail(
     username : string,
     verifyCode : string
 ) :Promise<ApiResponse>{
-
     try {
         await resend.emails.send({
             from: '<onboarding@resend.dev>',
@@ -21,3 +20,5 @@ export async function sendVerificationMail(
       return {success : false,message : 'Failed to send verification email'}
     }
 }
+
+
